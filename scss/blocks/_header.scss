@@ -1,0 +1,152 @@
+// HEADER
+.site-header {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 100%;
+  z-index: 50;
+  
+}
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  padding-top: 19px;
+  padding-bottom: 18px;
+}
+
+// LOGO
+
+.header__logo {
+  display: inline-block;
+}
+
+.logo__img {
+  width: 108px;
+  height: 29px;
+  display: block;
+}
+
+// NAV
+
+.header__nav {
+  margin-left: 58px;
+}
+
+.nav__list{
+  @include list-unstyled;
+  display: flex;
+  align-items: center;
+  
+}
+
+.nav__item {
+  margin-right: 32px;
+}
+
+.nav__a {
+  @include link-styled;
+  color: $text-dark;
+}
+
+.nav__a:hover {
+  color: $nav-a-hover;
+  transition: .3s ease;
+}
+
+.header__button-responsive {
+  display: none;
+}
+
+// BUTTON
+
+.header__button {
+  margin-left: auto;
+}
+
+.site-button {
+  @include button-style;
+  color: $text-white;
+  background-color: $button-background-color;
+}
+
+.site-button:hover {
+  @include button-style-hover;
+}
+
+.header__burger-button {
+  display: none;
+  border: none;
+  background-color: transparent;
+  margin-top: 10px;
+}
+
+.header__burger-button--img {
+  display: block;
+}
+
+// RESPONSIVE
+
+@include breakpoint-down (670px) {
+  .header__nav {
+    margin-left: auto;
+  }
+
+  .header__button {
+    display: none;
+  }
+}
+
+@include breakpoint-down (420px) {
+
+  .header__wrapper {
+    flex-direction: row-reverse;
+    width: 70%;
+  }
+
+  .header__logo {
+    display: block;
+  }
+
+  .header__nav {
+    display: none;
+    position: absolute;
+    top: 66px;
+    left: 0;
+    background-color: #333A44;
+    width: 256px;
+    height: 100vh;
+  }
+
+  .nav__list {
+    margin-top: 64px;
+    margin-left: -122px;
+    flex-direction: column-reverse;
+  }
+
+  .nav__item {
+    margin: 0;
+    margin-bottom: 24px;
+  }
+
+  .nav__item:last-child {
+    margin-left: -10px;
+  }
+
+  .nav__item:first-child {
+    margin-left: -24px;
+  }
+
+  .header__button-responsive {
+    position: absolute;
+    display: block;
+    width: 192px;
+    height: 53px;
+    top: 350px;
+    left: 30px;
+  }
+  
+  .header__burger-button {
+    margin-right: auto;
+    display: block;
+  }
+}

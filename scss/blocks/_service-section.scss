@@ -1,0 +1,229 @@
+// SERVICE-SECTION
+
+.main__service-section {
+  background-image: url(/images/Path-2.png);
+  background-repeat: no-repeat;
+  background-position: calc(50% - 250px) 15%
+}
+
+
+.service__list {
+  @include list-unstyled;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 180px;
+}
+
+.service__item {
+  width: 350px;
+}
+
+.service__item ~ .service__item {
+  margin-left: 30px;
+}
+
+.service__item:first-child:before {
+  content: "";
+  display: flex;
+  background-image: url(/images/phone.png);
+  background-repeat: no-repeat;
+  width: 96px;
+  height: 96px;
+  margin-bottom: 40px;
+}
+
+.service__item:nth-child(2):before {
+  content: "";
+  display: flex;
+  background-image: url(/images/scooter.png);
+  background-repeat: no-repeat;
+  width: 96px;
+  height: 96px;
+  margin-bottom: 40px;
+}
+
+.service__item:last-child:before {
+  content: "";
+  display: flex;
+  background-image: url(/images/scooter-ride.png);
+  background-repeat: no-repeat;
+  width: 96px;
+  height: 96px;
+  margin-bottom: 40px;
+}
+
+.service__heading {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 27px;
+  font-family: Space Mono;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -1.07143px;
+  color: $heading-color;
+}
+
+.service__text {
+  font-family: Lexend Deca;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 25px;
+  color: $text-dark;
+}
+// =========================
+// RESPONSIVE
+// =====================
+
+@include breakpoint-down (800px) {
+  
+  .main__service-section {
+    background-image: url(/images/Path-2-vertical.png);
+    background-repeat: no-repeat;
+    background-position: calc(50% - 240px) -0%
+  }
+  
+  .service__list {
+    flex-direction: column;
+    padding-top: 100px;
+    margin: 0;
+    width: 573px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .service__item {
+    width: 398px;
+    position: relative;
+    margin-left: auto;
+    margin-top: -100px;
+  }
+  
+  .service__item:first-child:before {
+    content: "";
+    display: flex;
+    background-image: url(/images/phone.png);
+    background-repeat: no-repeat;
+    width: 96px;
+    height: 96px;
+    transform: translate(-179px, 140px);
+  }
+  
+  .service__item:nth-child(2) {
+    position: relative;
+    margin-left: auto;
+  }
+  
+  .service__item:nth-child(2):before {
+    content: "";
+    display: flex;
+    background-image: url(/images/scooter.png);
+    background-repeat: no-repeat;
+    width: 96px;
+    height: 96px;
+    transform: translate(-179px, 140px);
+  }
+  
+  .service__item:last-child {
+    position: relative;
+    margin-left: auto;
+  }
+  
+  .service__item:last-child:before {
+    content: "";
+    display: flex;
+    background-image: url(/images/scooter-ride.png);
+    background-repeat: no-repeat;
+    width: 96px;
+    height: 96px;
+    transform: translate(-179px, 140px);
+  }
+}
+
+
+@include breakpoint-down (605px) {
+  
+  .main__service-section {
+    background-image: none;
+  }
+  
+  .service__list {
+    text-align: center;
+    margin: 0;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  
+  .service__item {
+    width: 100%;
+    margin-top: 0;
+  }
+  
+  .service__item ~ .service__item {
+    margin-left: 0px;
+  }
+  
+  .service__item:first-child:before {
+    content: "";
+    display: block;
+    background-image: url(/images/phone.png);
+    background-repeat: no-repeat;
+    width: 96px;
+    height: 96px;
+    transform: translate(0px, 0px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .service__item:nth-child(2):before {
+    content: "";
+    display: block;
+    background-image: url(/images/scooter.png);
+    background-repeat: no-repeat;
+    width: 96px;
+    height: 96px;
+    transform: translate(0px, 0px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .service__item:last-child:before {
+    content: "";
+    display: block;
+    background-image: url(/images/scooter-ride.png);
+    background-repeat: no-repeat;
+    width: 96px;
+    height: 96px;
+    transform: translate(0px, 0px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

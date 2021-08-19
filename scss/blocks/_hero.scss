@@ -1,0 +1,152 @@
+// HERO-SECTION
+
+.main__hero-section {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 96px;
+  background-image: url(/images/hero-bg.png);
+  background-repeat: no-repeat;
+  background-position: calc(50% + 0px) 0%;
+}
+
+.hero__bg-dark {
+  background-color: rgba(47, 59, 89, 0.7);
+  background-image: url(/images/hero-left-image.png), url(/images/hero-right-image.png);
+  background-repeat: no-repeat;
+  background-position: calc(50% - 618px) 54%, calc(50% + 210px) 69%;
+}
+
+.hero__content {
+  padding-top: 153px;
+  padding-bottom: 152px;
+}
+
+.hero__heading {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 40px;
+  font-family: Space Mono;
+  color: $text-white;
+  font-weight: bold;
+  font-size: 56px;
+  line-height: 56px;
+  letter-spacing: -2.5px;
+  width: 500px;
+}
+
+.hero__text {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 40px;
+  width: 405px;
+  color: $text-white;
+  font-family: Lexend Deca;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  margin-left: 90px;
+  
+}
+
+.hero__button {
+  margin-left: 90px;
+}
+
+// =============================
+// RESPONSIVE
+// =========================
+
+
+@include breakpoint-down (900px) {
+  
+  .main__hero-section {
+    background-image: url(/images/hero-bg.png);
+    background-repeat: no-repeat;
+    background-position: calc(50% + 40%) 0%;
+    background-size: cover;
+  }
+  
+  .hero__bg-dark {
+    background-image: url(/images/hero-right-image.png);
+    background-repeat: no-repeat;
+    background-position: calc(50% - 250px) 90%;
+  }
+  
+  
+  .hero__content {
+    text-align: center;
+    padding-top: 137px;
+    padding-bottom: 217px;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .hero__heading {
+    padding-bottom: 24px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+  }
+  
+  .hero__text {
+    padding-bottom: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  
+  .hero__button {
+    margin-left: 0px;
+  }
+}
+
+@include breakpoint-down (670px) {
+  
+  .main__hero-section {
+    margin-top: 68px;
+  }
+}
+
+@include breakpoint-down (420px) {
+  
+  .main__hero-section {
+    margin-top: 66px;
+  }
+}
+
+
+@include breakpoint-down (500px) {
+  
+  .hero__content  {
+    width: 95%;
+    padding-top: 115px;
+    padding-bottom: 179px;
+  }
+  
+  .hero__heading {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

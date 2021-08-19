@@ -1,0 +1,443 @@
+.block__list{
+  margin: 0;
+  padding: 0;
+  margin-top: 150px;
+  margin-bottom: 237px;
+}
+
+.block-list__item {
+  background-image: url(/images/grey-circle.png);
+  background-repeat: no-repeat;
+  background-position: calc(50% + 840px) 30%;
+  margin-bottom: 55px;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.block-list__item:nth-child(2) {
+  background-position: calc(50% - 840px) 45%;
+}
+
+.block-item__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.block-list__item:nth-child(2) .block-item__wrapper {
+  flex-direction: row-reverse;
+}
+
+.block-item__content {
+  width: 445px;
+  margin-right: 220px;
+}
+
+.block-list__item:nth-child(2) .block-item__content {
+  margin-right: 0;
+  margin-left: 220px;
+}
+
+.block-content_heading {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 24px;
+  font-family: Space Mono;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 48px;
+  letter-spacing: -2.14286px;
+  color: $heading-color;
+}
+
+.block-content__text {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 40px;
+  font-family: Lexend Deca;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 25px;
+  color: $text-dark;
+}
+
+.block-content__button {
+  padding-left: 44px;
+  padding-right: 44px;
+}
+
+.block-item__img{
+  position: relative;
+}
+
+.block-list__item:last-child .block-img__img {
+  border-radius: 50%;
+}
+
+.block-list__item:first-child .block-item__img::before {
+  content: "";
+  display: block;  
+  background-image: url(/images/telemetry-path.png);
+  background-repeat: no-repeat;
+  width: 740px;
+  height: 150px;
+  position: absolute;
+  top: 300px;
+  left: -130px;
+}
+
+.block-list__item:nth-child(2) .block-item__img::before {
+  content: "";
+  display: block;
+  background-image: url(/images/city-path.png);
+  background-repeat: no-repeat;
+  width: 740px;
+  height: 140px;
+  position: absolute;
+  left: -550px;
+}
+
+.block-list__item:last-child .block-item__img::before {
+  content: "";
+  display: block;
+  background-image: url(/images/payment-path.png);
+  background-repeat: no-repeat;
+  width: 740px;
+  height: 140px;
+  position: absolute;
+  top: 75px;
+  right: -540px;
+}
+
+
+// ========================
+// RESPONSIVE
+// =====================
+
+
+@include breakpoint-down (1326px) {
+  
+  .block-list__item:first-child .block-item__img::before {
+    content: "";
+    display: block;  
+    background-image: url(/images/telemetry-path..png);
+    background-repeat: no-repeat;
+    width:683px;
+    height: 150px;
+    position: absolute;
+    top: 300px;
+    left: -130px;
+  }
+  
+  .block-list__item:last-child .block-item__img::before {
+    content: "";
+    display: block;
+    background-image: url(/images/payment-path..png);
+    background-repeat: no-repeat;
+    width:300px;
+    height: 140px;
+    position: absolute;
+    top: 75px;
+    right: -108px;
+  }
+}
+
+@include breakpoint-down (1325px) {
+  
+  .block-list__item {
+    background-image: url(/images/grey-circle.png);
+    background-repeat: no-repeat;
+    background-position: calc(50% + 500px) 10%;
+    margin-bottom: 55px;
+    padding-top: 50px;
+    padding-bottom: 100px;
+  }
+  
+  .block-list__item:nth-child(2) {
+    background-position: calc(50% - 500px) 10%;
+  }
+  
+  .block-list__item:first-child .block-item__img::before {
+    content: "";
+    display: block;  
+    background-image: url(/images/telemetry-path.png);
+    background-repeat: no-repeat;
+    width:740px;
+    height: 150px;
+    position: absolute;
+    top: 300px;
+    left: -130px;
+  }
+  
+  .block-list__item:last-child .block-item__img::before {
+    content: "";
+    display: block;
+    background-image: url(/images/payment-path.png);
+    background-repeat: no-repeat;
+    width:740px;
+    height: 140px;
+    position: absolute;
+    top: 75px;
+    right: -300px;
+  }
+  
+  .block-item__wrapper {
+    flex-direction: column-reverse;
+  }
+  
+  .block-list__item:nth-child(2) .block-item__wrapper {
+    flex-direction: column-reverse;
+  }
+  
+  .block-list__item:nth-child(2) .block-item__content {
+    margin: 0;
+    width: 80%;
+  }
+  
+  
+  .block-item__content {
+    text-align: center;
+    width: 80%;
+    margin: 0;
+  }
+  
+  .block-item__img {
+    margin-bottom: 56px;
+  }
+  
+}
+
+
+@include breakpoint-down (1160px) {
+    
+  .block__list{
+    margin-top: 80px;
+    margin-bottom: 230px;
+  }
+  
+  .block-item__wrapper {
+    flex-direction: column-reverse;
+  }
+  
+  .block-list__item:nth-child(2) .block-item__wrapper {
+    flex-direction: column-reverse;
+  }
+  
+  .block-list__item:nth-child(2) .block-item__content {
+    width: 80%;
+  }
+  
+  .block-item__content {
+    text-align: center;
+    width: 80%
+  }
+  
+  .block-content_heading {
+    margin-bottom: 40px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  
+  .block-content__text {
+    margin-bottom: 40px;
+  }
+  
+  .block-content__button {
+    padding-left: 44px;
+    padding-right: 44px;
+  }
+}
+
+@include breakpoint-down (1060px) {
+
+  .block-list__item:last-child .block-item__img::before {
+    content: "";
+    display: block;
+    background-image: url(/images/payment-path.png);
+    background-repeat: no-repeat;
+    width:740px;
+    height: 140px;
+    position: absolute;
+    top: 75px;
+    right: -200px;
+  }
+}
+
+@include breakpoint-down (855px) {
+  
+  .block__list{
+    margin-top: 70px;
+    margin-bottom: 90px;
+  }
+
+  .block-list__item:first-child .block-item__img::before {
+    content: "";
+    display: block;  
+    background-image: url(/images/telemetry-path.png);
+    background-repeat: no-repeat;
+    width:740px;
+    height: 150px;
+    position: absolute;
+    top: 300px;
+    left: -134px;
+  }
+
+  .block-list__item:last-child .block-item__img::before {
+    content: "";
+    display: block;
+    background-image: url(/images/payment-path.png);
+    background-repeat: no-repeat;
+    width: 370px;
+    height: 140px;
+    position: absolute;
+    top: 75px;
+    right: -160px;
+  }
+}
+
+@include breakpoint-down (767px) {
+  
+  .block__list{
+    margin-top: 60px;
+    margin-bottom: 70px;
+  }
+
+  .block-list__item:first-child .block-item__img::before {
+    content: "";
+    display: block;  
+    background-image: url(/images/telemetry-path.png);
+    background-repeat: no-repeat;
+    width:700px;
+    height: 150px;
+    position: absolute;
+    top: 300px;
+    left: -134px;
+  }
+
+  .block-list__item:last-child .block-item__img::before {
+    content: "";
+    display: block;
+    background-image: url(/images/payment-path.png);
+    background-repeat: no-repeat;
+    width: 450px;
+    height: 140px;
+    position: absolute;
+    top: 75px;
+    right: -120px;
+  }
+}
+
+@include breakpoint-down (767px) {
+
+  .block-list__item:first-child .block-item__img::before {
+    width:500px;
+    height: 150px;
+    top: 300px;
+    left: -0px;
+  }
+
+  .block-list__item:last-child .block-item__img::before {
+    width: 350px;
+    height: 140px;
+    top: 75px;
+    right: -0px;
+  }
+}
+
+@include breakpoint-down (570px) {
+
+  .block__list{
+    margin-top: 50px;
+    margin-bottom: 0px;
+  }
+
+  .block-list__item ~ .block-list__item {
+    margin-top: -90px;
+  }
+
+  .block-list__item:nth-child(2) .block-item__content {
+    width: 100%;
+  }
+  
+  
+  .block-item__content {
+    text-align: center;
+    width: 100%
+  }
+  
+  .block-content_heading {
+    margin-bottom: 32px;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 32px;
+    line-height: 32px;
+  }
+  
+  .block-content__text {
+    margin-bottom: 32px;
+  }
+  
+  .block-content__button {
+    padding-left: 44px;
+    padding-right: 44px;
+  }
+
+  .block-list__item:first-child .block-item__img::before {
+    width: 350px;
+    height: 150px;
+    top: 170px;
+    left: -8px;
+  }
+
+  .block-list__item:nth-child(2) .block-item__img::before {
+    top: 50px;
+    left: -500px;
+  }
+
+  .block-list__item:last-child .block-item__img::before {
+    width: 300px;
+    height: 140px;
+    top: 0px;
+    right: -30px;
+  }
+
+  .block-img__img {
+    width: 311px;
+    height: 311px;
+  }
+}
+
+@include breakpoint-down (375px) {
+
+  .block-list__item:first-child .block-item__img::before {
+    width: 350px;
+    height: 150px;
+    top: 170px;
+    left: -8px;
+  }
+
+  .block-list__item:last-child .block-item__img::before {
+    width: 200px;
+    height: 140px;
+    top: 0px;
+    right: -32px;
+  }
+}
+
+@include breakpoint-down (374px) {
+
+  .block-list__item:first-child .block-item__img::before {
+    width: 307px;
+    height: 150px;
+    top: 170px;
+    left: -8px;
+  }
+
+  .block-list__item:last-child .block-item__img::before {
+    width: 200px;
+    height: 140px;
+    top: 0px;
+    right: -20px;
+  }
+}
