@@ -474,6 +474,10 @@ img {
   transition: 0.3s ease;
 }
 
+.nav__a:active {
+  opacity: 0.5;
+}
+
 .header__button-responsive {
   display: none;
 }
@@ -501,6 +505,10 @@ img {
   border: 3px solid #FCB72B;
   color: #FCB72B;
   transition: 0.3s ease;
+}
+
+.site-button:active {
+  opacity: 0.5;
 }
 
 .header__burger-button {
@@ -1385,6 +1393,10 @@ img {
   transition: 0.3s ease;
 }
 
+.footer-nav__a:active {
+  opacity: 0.5;
+}
+
 .footer-bottom__internet-address {
   display: flex;
   align-items: center;
@@ -1406,6 +1418,11 @@ img {
 
 .footer-bottom__img:hover path {
   fill: grey;
+}
+
+.footer-bottom__img:active {
+  transition: 0.3s ease;
+  opacity: 0.5;
 }
 
 @media only screen and (max-width: 850px) {

@@ -73,6 +73,10 @@
   transition: .3s ease;
 }
 
+.footer-nav__a:active {
+  opacity: .5;
+}
+
 .footer-bottom__internet-address {
   display: flex;
   align-items: center;
@@ -94,6 +98,11 @@
 
 .footer-bottom__img:hover path {
   fill: grey;
+}
+
+.footer-bottom__img:active {
+  transition: .3s ease;
+  opacity: .5;
 }
 
 // ====================================

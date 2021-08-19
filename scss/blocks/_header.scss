@@ -53,6 +53,10 @@
   transition: .3s ease;
 }
 
+.nav__a:active {
+  opacity: .5;
+}
+
 .header__button-responsive {
   display: none;
 }
@@ -71,6 +75,10 @@
 
 .site-button:hover {
   @include button-style-hover;
+}
+
+.site-button:active {
+  @include site-button-active;
 }
 
 .header__burger-button {
